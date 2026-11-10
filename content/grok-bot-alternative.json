@@ -1,0 +1,79 @@
+{
+  "type": "compare",
+  "slug": "grok-bot-alternative",
+  "rival": "Grok Bot",
+  "maker": "SpaceXSI (formerly xAI)",
+  "title": "Grok Bot alternative: pi-durable-bot (Pots), open source",
+  "description": "The open-source Grok Bot alternative: an AI coworker that acts on its own. MIT-licensed, on any machine you choose, with any model, in any channel.",
+  "checked": "2026-11-10",
+  "h1": ["The open-source", "Grok Bot alternative."],
+  "claim": "An AI coworker that acts on its own and does the work on its own computer.",
+  "answer": "pi-durable-bot (Pots) is an open-source AI coworker that decides when to act and works on its own computer. Grok Bot is SpaceXSI's closed service of always-on AI teammates on the maker's cloud. The difference: Pots runs on any machine you choose, with any model, and its code is yours.",
+  "rivalIs": {
+    "text": "Grok Bot, from SpaceXSI (formerly xAI), is a team of always-on AI teammates. A user's Bots share one cloud computer, sign in to your tools, and come back to you when they need approval. You use them in desktop and mobile apps and on X; team Bots also work in Slack.",
+    "sources": [
+      { "label": "Introducing Grok Bot", "url": "https://x.ai/news/introducing-grok-bot" },
+      { "label": "How Grok Bot works", "url": "https://docs.x.ai/grok-bot/how-grok-bot-works" },
+      { "label": "Grok Bot FAQ", "url": "https://docs.x.ai/grok-bot/faq" }
+    ]
+  },
+  "table": {
+    "note": "Grok Bot cells: SpaceXSI's public pages, checked 2026-11-10. Your data: with a local model for the agent and the judge, nothing leaves your machine; with a hosted model, requests go to the provider you chose.",
+    "rows": [
+      { "label": "Source code", "pots": "Open, MIT", "rival": "Closed" },
+      { "label": "Where it runs", "pots": "Any machine you choose", "rival": "The maker's cloud (Cursor account)" },
+      { "label": "Model", "pots": "Any: your subscription, 40+ providers, or a local model", "rival": "The maker picks per task; no model picker" },
+      { "label": "Where you talk to it", "pots": "Any channel (Slack, Discord, Telegram, and more)", "rival": "Desktop and mobile apps, X; Slack for team bots" },
+      { "label": "Your data", "pots": "On your machine, in each bot's folder", "rival": "On the maker's cloud" },
+      { "label": "Change the agent itself", "pots": "Yes. It is your code", "rival": "No. Plugins, MCP servers and settings" },
+      { "label": "Messages that do not mention it", "pots": "Yes. It decides if they are its job", "rival": "Not stated. Slack docs describe mentions" },
+      { "label": "Asks before it acts", "pots": "No. No approval step on its computer", "rival": "Yes. Auto Review, on by default" },
+      { "label": "Price", "pots": "Free (MIT). You bring the machine and the model", "rival": "From USD 30 a month; extra use billed by token cost" }
+    ]
+  },
+  "pickRival": [
+    "You want a hosted service with nothing to install or run.",
+    "You want its desktop and phone apps, and X.",
+    "You want to teach it a task by showing it once.",
+    "Your company needs admin controls such as DLP and network rules."
+  ],
+  "pickPots": [
+    "You want the code, and to change the agent itself.",
+    "You want it on a machine you choose.",
+    "You want any model, including a local one.",
+    "You want it in any channel (Slack, Discord, Telegram, and more)."
+  ],
+  "peers": {
+    "intro": "Open-source projects whose GitHub description names Grok Bot, found on 2026-11-10. We have not tested them.",
+    "items": [
+      { "name": "milind-soni/OpenMausBot", "url": "https://github.com/milind-soni/OpenMausBot", "note": "Apache-2.0." },
+      { "name": "HarnessMD/munder-difflin", "url": "https://github.com/HarnessMD/munder-difflin", "note": "MIT. Names dots, bots and muses." },
+      { "name": "elie222/rakazo", "url": "https://github.com/elie222/rakazo", "note": "Apache-2.0." },
+      { "name": "Anil-matcha/open-duet", "url": "https://github.com/Anil-matcha/open-duet", "note": "Apache-2.0. Also names Duet, dots and Muse." },
+      { "name": "modelflare-ai/AnyModelBot", "url": "https://github.com/modelflare-ai/AnyModelBot", "note": "MIT. Also names dots and Duet." },
+      { "name": "leepokai/Codync", "url": "https://github.com/leepokai/Codync", "note": "Apache-2.0. Also names Muse and dots." },
+      { "name": "najmuzzaman-mohammad/gawkbot", "url": "https://github.com/najmuzzaman-mohammad/gawkbot", "note": "License not detected." },
+      { "name": "rome-os/rome", "url": "https://github.com/rome-os/rome", "note": "MIT. Also names Muse." },
+      { "name": "wolfqing/OpenSuperBot", "url": "https://github.com/wolfqing/OpenSuperBot", "note": "MIT." }
+    ]
+  },
+  "faq": [
+    { "q": "Is Grok Bot open source?", "a": "No. SpaceXSI's pages offer no source code or self-hosted version; its open-source Grok Build is a different product." },
+    { "q": "Which model does Grok Bot use?", "a": "Grok Bot picks it per task, from SpaceXSI or a third-party provider, and does not show which. Pots uses the model you choose." },
+    { "q": "Can Pots use my Grok subscription?", "a": "Yes. `pots login` can sign in with a subscription you already pay for, Grok among them." },
+    { "q": "Is Pots free?", "a": "Yes. Pots is MIT-licensed; you bring the machine and the model." },
+    { "q": "Is Pots affiliated with SpaceXSI or xAI?", "a": "No. The other products as their makers described them in public, checked 2026-11-10; they may have changed since. Grok Bot, dots, Claude Duet, Claude Tag and Muse are products of SpaceXSI, OpenAI, Anthropic and Meta. pi-durable-bot is not affiliated with any of them." }
+  ],
+  "sources": [
+    { "label": "Grok Bot product page and plans", "url": "https://x.ai/bot" },
+    { "label": "Introducing Grok Bot", "url": "https://x.ai/news/introducing-grok-bot" },
+    { "label": "xAI joins SpaceX", "url": "https://x.ai/news/xai-joins-spacex" },
+    { "label": "SpaceXSI news", "url": "https://x.ai/news" },
+    { "label": "How Grok Bot works", "url": "https://docs.x.ai/grok-bot/how-grok-bot-works" },
+    { "label": "Grok Bot FAQ", "url": "https://docs.x.ai/grok-bot/faq" },
+    { "label": "Get started", "url": "https://docs.x.ai/grok-bot/get-started" },
+    { "label": "Shared Bots", "url": "https://docs.x.ai/grok-bot/shared-bots" },
+    { "label": "Computer and apps", "url": "https://docs.x.ai/grok-bot/computer-and-apps" },
+    { "label": "Approvals, security and privacy", "url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy" }
+  ]
+}

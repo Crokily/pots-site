@@ -1,0 +1,161 @@
+{
+  "type": "compare",
+  "slug": "claude-tag-alternative",
+  "rival": "Claude Tag",
+  "maker": "Anthropic",
+  "title": "Claude Tag alternative: pi-durable-bot (Pots), open source",
+  "description": "An open-source alternative to Claude Tag: pi-durable-bot (Pots) also reads the channel and decides when to act, but runs on your machine with any model.",
+  "checked": "2026-11-10",
+  "h1": [
+    "The open-source",
+    "Claude Tag alternative."
+  ],
+  "claim": "Claude Tag and pi-durable-bot (Pots) both read the channel and decide when to act. Pots is open source, runs on any machine you choose, and works with any model.",
+  "answer": "Pots is an open-source AI coworker that decides when to act and works on its own computer. Claude Tag is Anthropic's Claude in Slack; it also reads untagged messages and decides itself whether to act. The differences are open source, self-hosting and model choice.",
+  "rivalIs": {
+    "text": "Claude Tag puts Claude in Slack as a team member that anyone in a channel can tag. By default it also reads untagged messages and decides for each one whether to reply, offer help or start work. Each thread runs in a sandbox on Anthropic's infrastructure; it is a public beta for Team and Enterprise.",
+    "sources": [
+      {
+        "label": "Introducing Claude Tag",
+        "url": "https://www.anthropic.com/news/introducing-claude-tag"
+      },
+      {
+        "label": "When Claude responds",
+        "url": "https://claude.com/docs/claude-tag/users/when-claude-responds"
+      },
+      {
+        "label": "Security and data",
+        "url": "https://claude.com/docs/claude-tag/concepts/security-and-data"
+      }
+    ]
+  },
+  "table": {
+    "note": "Claude Tag cells: Anthropic's public pages, checked 2026-11-10. Your data: with a local model for the agent and the judge, nothing leaves your machine; with a hosted model, requests go to the provider you chose.",
+    "rows": [
+      {
+        "label": "Source code",
+        "pots": "Open, MIT",
+        "rival": "Closed"
+      },
+      {
+        "label": "Where it runs",
+        "pots": "Any machine you choose",
+        "rival": "The maker's cloud; self-hosted runners optional, the service stays hosted"
+      },
+      {
+        "label": "Model",
+        "pots": "Any: your subscription, 40+ providers, or a local model",
+        "rival": "Claude Opus and Sonnet; you can switch"
+      },
+      {
+        "label": "Where you talk to it",
+        "pots": "Any channel (Slack, Discord, Telegram, and more)",
+        "rival": "Slack"
+      },
+      {
+        "label": "Your data",
+        "pots": "On your machine, in each bot's folder",
+        "rival": "On the maker's cloud"
+      },
+      {
+        "label": "Change the agent itself",
+        "pots": "Yes. It is your code",
+        "rival": "No. Connectors, plugins, skills"
+      },
+      {
+        "label": "Run all of it yourself",
+        "pots": "Yes. Gateway, agent, log and memory on your machine",
+        "rival": "No. Runners execute in your network; control plane and conversation go to Anthropic"
+      }
+    ]
+  },
+  "pickRival": [
+    "Your team works in Slack and has Claude Team or Enterprise.",
+    "You want Anthropic to host it, with no machine to keep.",
+    "You want admin controls: channel access, spend limits, an action log.",
+    "You want a fresh sandbox per thread, outbound traffic denied by default."
+  ],
+  "pickPots": [
+    "You want the source code, under MIT.",
+    "You want all of it on your machine, not only the runners.",
+    "You want any model, including a local one."
+  ],
+  "peers": {
+    "intro": "Open-source projects on GitHub that name or tag Claude Tag, found on 2026-11-10. We have not tested them.",
+    "items": [
+      {
+        "name": "agentconnect-md/agentconnect",
+        "url": "https://github.com/agentconnect-md/agentconnect",
+        "note": "Apache-2.0."
+      },
+      {
+        "name": "linxidnju/OpenTag",
+        "url": "https://github.com/linxidnju/OpenTag",
+        "note": "License not detected. A Slack agent gateway, tagged claude-tag."
+      },
+      {
+        "name": "fancyboi999/open-tag",
+        "url": "https://github.com/fancyboi999/open-tag",
+        "note": "Apache-2.0."
+      },
+      {
+        "name": "AgentBull/ankole",
+        "url": "https://github.com/AgentBull/ankole",
+        "note": "Apache-2.0."
+      },
+      {
+        "name": "Anil-matcha/open-claude-tag",
+        "url": "https://github.com/Anil-matcha/open-claude-tag",
+        "note": "MIT."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "Does Claude Tag read messages that do not tag it?",
+      "a": "Yes. By default it reads messages in its channels, tagged or not, and decides for each whether to act; a mention only guarantees a reply."
+    },
+    {
+      "q": "Can I self-host Claude Tag?",
+      "a": "Partly. Team and Enterprise can run sessions on self-hosted runners (public beta), but the control plane, the conversation and, by default, model inference still go to Anthropic."
+    },
+    {
+      "q": "Can Pots use Claude models?",
+      "a": "Yes. `pots login` can sign in with a Claude subscription or an API key; any other model pi supports works too."
+    },
+    {
+      "q": "Is Pots affiliated with Anthropic?",
+      "a": "No. The other products as their makers described them in public, checked 2026-11-10; they may have changed since. Grok Bot, dots, Claude Duet, Claude Tag and Muse are products of SpaceXSI, OpenAI, Anthropic and Meta. pi-durable-bot is not affiliated with any of them."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Introducing Claude Tag",
+      "url": "https://www.anthropic.com/news/introducing-claude-tag"
+    },
+    {
+      "label": "Claude Tag overview",
+      "url": "https://claude.com/docs/claude-tag/overview"
+    },
+    {
+      "label": "When Claude responds",
+      "url": "https://claude.com/docs/claude-tag/users/when-claude-responds"
+    },
+    {
+      "label": "Models",
+      "url": "https://claude.com/docs/claude-tag/users/models"
+    },
+    {
+      "label": "Security and data",
+      "url": "https://claude.com/docs/claude-tag/concepts/security-and-data"
+    },
+    {
+      "label": "Data lifecycle",
+      "url": "https://claude.com/docs/claude-tag/concepts/data-lifecycle"
+    },
+    {
+      "label": "Self-hosted environments",
+      "url": "https://code.claude.com/docs/en/self-hosted-environments"
+    }
+  ]
+}

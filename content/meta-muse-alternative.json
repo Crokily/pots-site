@@ -1,0 +1,64 @@
+{
+  "type": "compare",
+  "slug": "meta-muse-alternative",
+  "rival": "Muse",
+  "maker": "Meta",
+  "title": "Meta Muse alternative: pi-durable-bot (Pots), open source",
+  "description": "An open-source alternative to Meta Muse: pi-durable-bot (Pots) is an AI coworker for your team that acts on its own, on a machine you choose, with any model.",
+  "checked": "2026-11-10",
+  "h1": ["The open-source", "Meta Muse alternative."],
+  "claim": "An AI coworker for your team that acts on its own, on a machine you choose, with any model.",
+  "answer": "pi-durable-bot (Pots) is an open-source AI coworker that decides when to act and works on its own computer. Muse is Meta's personal AI agent, in its own app and in WhatsApp, on a cloud VM with Meta's Muse Spark model. The difference: Pots runs on any machine you choose, with any model, and keeps its log and memory there.",
+  "rivalIs": {
+    "text": "Muse is Meta's personal AI agent that helps with your goals and suggests ideas without being asked. It runs on a dedicated cloud VM with a full browser, and a separate Sentinel agent must approve anything that reaches the internet. You talk to it in the Muse app or in WhatsApp, and it uses Meta's Muse Spark model.",
+    "sources": [
+      { "label": "Introducing Muse", "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/" },
+      { "label": "Muse product page", "url": "https://ai.meta.com/muse/" }
+    ]
+  },
+  "table": {
+    "note": "Muse cells: Meta's public pages, checked 2026-11-10. Your data: with a local model for the agent and the judge, nothing leaves your machine; with a hosted model, requests go to the provider you chose.",
+    "rows": [
+      { "label": "Source code", "pots": "Open, MIT", "rival": "Closed" },
+      { "label": "Where it runs", "pots": "Any machine you choose", "rival": "The maker's cloud" },
+      { "label": "Model", "pots": "Any: your subscription, 40+ providers, or a local model", "rival": "Meta's Muse Spark" },
+      { "label": "Where you talk to it", "pots": "Any channel (Slack, Discord, Telegram, and more)", "rival": "Its own app, WhatsApp" },
+      { "label": "Your data", "pots": "On your machine, in each bot's folder", "rival": "On the maker's cloud" },
+      { "label": "Change the agent itself", "pots": "Yes. It is your code", "rival": "No. Connectors" },
+      { "label": "Availability", "pots": "Anyone, from npm", "rival": "US, Canada and Singapore; in limited testing" },
+      { "label": "Price", "pots": "Free (MIT). You bring the machine and the model", "rival": "Free with a usage limit; paid plans USD 20 and 100 a month" }
+    ]
+  },
+  "pickRival": [
+    "You want a personal agent in WhatsApp, with nothing to install.",
+    "You want a free plan that someone else hosts.",
+    "You want a Sentinel agent to approve all internet access.",
+    "You want to use its cloud browser yourself, too."
+  ],
+  "pickPots": [
+    "You want a coworker in your team's channels, not a personal app.",
+    "You want the code, and to change the agent itself.",
+    "You want any model, including a local one."
+  ],
+  "peers": {
+    "intro": "Open-source projects on GitHub that name or tag Muse, found on 2026-11-10. We have not tested them.",
+    "items": [
+      { "name": "HarnessMD/munder-difflin", "url": "https://github.com/HarnessMD/munder-difflin", "note": "MIT. Names dots, bots and muses." },
+      { "name": "Anil-matcha/open-duet", "url": "https://github.com/Anil-matcha/open-duet", "note": "Apache-2.0. Also names Grok Bot, Duet and dots." },
+      { "name": "nano-muse/nanoMuse", "url": "https://github.com/nano-muse/nanoMuse", "note": "GPL-3.0. A personal agent, tagged meta-muse." },
+      { "name": "rome-os/rome", "url": "https://github.com/rome-os/rome", "note": "MIT. Also names Grok Bot." }
+    ]
+  },
+  "faq": [
+    { "q": "Is Meta Muse open source?", "a": "No. Meta's pages offer no source code or self-hosted version; Muse runs on a cloud VM the maker hosts." },
+    { "q": "Where is Muse available?", "a": "Meta's posts name the US, Canada and Singapore, and Muse is in limited testing. Pots installs from npm on any machine you choose." },
+    { "q": "Is Pots affiliated with Meta?", "a": "No. The other products as their makers described them in public, checked 2026-11-10; they may have changed since. Grok Bot, dots, Claude Duet, Claude Tag and Muse are products of SpaceXSI, OpenAI, Anthropic and Meta. pi-durable-bot is not affiliated with any of them." }
+  ],
+  "sources": [
+    { "label": "Introducing Muse", "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/" },
+    { "label": "Muse product page", "url": "https://ai.meta.com/muse/" },
+    { "label": "Muse subscriptions", "url": "https://www.meta.com/help/subscriptions/1021145227643680/" },
+    { "label": "Muse for small business", "url": "https://about.fb.com/news/2026/09/introducing-muse-small-business/" },
+    { "label": "Muse in Singapore", "url": "https://about.fb.com/news/2026/10/muse-is-now-available-in-singapore-the-worlds-first-personal-ai-agent-built-for-everyone/" }
+  ]
+}

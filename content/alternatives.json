@@ -1,0 +1,17 @@
+{
+  "type": "hub",
+  "slug": "alternatives",
+  "title": "Open-source alternative to Grok Bot, dots, Duet, Tag and Muse",
+  "description": "pi-durable-bot (Pots) is the open-source alternative to Grok Bot, OpenAI dots, Claude Duet, Claude Tag and Meta Muse. Each comparison lists its sources.",
+  "checked": "2026-11-10",
+  "h1": ["Five closed products.", "One open-source alternative."],
+  "claim": "The open-source Grok Bot alternative: an AI coworker that acts on its own. Each page puts pi-durable-bot (Pots) next to one product, with sources.",
+  "cards": [
+    { "slug": "grok-bot-alternative", "rival": "Grok Bot", "maker": "SpaceXSI (formerly xAI)", "line": "AI teammates on the maker's cloud; the maker picks the model." },
+    { "slug": "openai-dots-alternative", "rival": "dots", "maker": "OpenAI", "line": "Always-on agents, one per person, in ChatGPT, Slack and Teams." },
+    { "slug": "claude-duet-alternative", "rival": "Claude Duet", "maker": "Anthropic", "line": "A proactive agent in its own app; a US-only preview." },
+    { "slug": "claude-tag-alternative", "rival": "Claude Tag", "maker": "Anthropic", "line": "Claude in Slack; it also reads untagged messages." },
+    { "slug": "meta-muse-alternative", "rival": "Muse", "maker": "Meta", "line": "A personal agent in its own app and in WhatsApp." }
+  ],
+  "note": "Each page compares the same six rows, from the makers' own pages, and links them. To be fair: all five also have a cloud computer or sandbox, memory and scheduled work. The other products as their makers described them in public, checked 2026-11-10; they may have changed since. Grok Bot, dots, Claude Duet, Claude Tag and Muse are products of SpaceXSI, OpenAI, Anthropic and Meta. pi-durable-bot is not affiliated with any of them."
+}

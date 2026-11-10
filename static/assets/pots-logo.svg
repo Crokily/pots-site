@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="512" height="512">
+  <!-- Pots: a pi sign that is also a small creature. The bar is its head, the two legs are pi's legs. -->
+  <defs><linearGradient id="potsg" x1="0" y1="0" x2=".2" y2="1"><stop offset="0" stop-color="#7FA8FF"/><stop offset=".6" stop-color="#C9C6FF"/><stop offset="1" stop-color="#FFD3B8"/></linearGradient></defs>
+  <rect width="200" height="200" rx="48" fill="url(#potsg)"/>
+  <rect x="30" y="56" width="140" height="64" rx="32" fill="#FFFFFF"/>
+  <rect x="58" y="98" width="28" height="64" rx="14" fill="#FFFFFF"/>
+  <path d="M128 102 V148 Q128 156 136 156" stroke="#FFFFFF" stroke-width="28" stroke-linecap="round" fill="none"/>
+  <ellipse cx="82" cy="88" rx="8.5" ry="13" fill="#142236"/>
+  <ellipse cx="118" cy="88" rx="8.5" ry="13" fill="#142236"/>
+</svg>

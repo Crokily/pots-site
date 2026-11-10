@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pi-durable-bot (Pots): the open-source Grok Bot alternative</title>
+<meta name="description" content="pi-durable-bot (Pots) is an open-source AI coworker that acts on its own. It reads every channel you give it, decides what matters, does the work on its own computer, and speaks up when it should. MIT. Any model, any channel, any machine you choose.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:title" content="pi-durable-bot (Pots): the open-source Grok Bot alternative">
+<meta property="og:description" content="An AI coworker that acts on its own. Open source, MIT, on any machine you choose.">
+<meta property="og:image" content="/assets/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/pots-logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="/home.css">
+<link rel="stylesheet" href="/pages.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr">
+  <a class="brand" href="#top" aria-label="pi-durable-bot (Pots), home">
+    <span class="pots" data-pots></span><span class="brand-word">Pots</span>
+  </a>
+  <nav class="hdr-nav" aria-label="Sections">
+    <a href="#how">How it works</a>
+    <a href="#open">Open and yours</a>
+    <a href="#compare">Compare</a>
+    <a href="#start">Quick start</a>
+    <a href="#agents">For agents</a>
+  </nav>
+  <a class="starpill" href="https://github.com/Crokily/pi-durable-bot" aria-label="Star pi-durable-bot on GitHub">
+    <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 .9l2.1 4.4 4.8.6-3.5 3.3.9 4.8L8 11.7 3.7 14l.9-4.8L1.1 5.9l4.8-.6z"/></svg>
+    <span>Star</span><span class="count" data-stars hidden></span>
+  </a>
+</header>
+
+<main id="main">
+
+<!-- ============ THE STORY: one creature, five states ============ -->
+<section class="story" id="top" aria-label="What Pots does">
+  <div class="stage" data-state="0">
+    <div class="stage-bg" aria-hidden="true"></div>
+    <div class="hero-wash" aria-hidden="true"></div>
+
+    <!-- state 0: it watches -->
+    <div class="hero">
+      <div class="hero-copy">
+        <span class="pots anchor anchor--hero" data-pots data-pose="idle"></span>
+        <p class="display"><span class="h-a">Not a bot.</span> <span class="h-b">A coworker.</span></p>
+        <h1>The open-source Grok Bot alternative: an AI coworker that acts on its own.</h1>
+        <p class="lead">pi-durable-bot (Pots) reads every channel you give it, works on its own computer, and speaks up when it should.</p>
+        <div class="cta-row">
+          <a class="btn btn-ink" href="https://github.com/Crokily/pi-durable-bot">
+            <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 .9l2.1 4.4 4.8.6-3.5 3.3.9 4.8L8 11.7 3.7 14l.9-4.8L1.1 5.9l4.8-.6z"/></svg>
+            <span>Star on GitHub</span><span class="count" data-stars hidden></span>
+          </a>
+          <button class="cmd" type="button" data-copy="npm install -g pi-durable-bot" aria-label="Copy the install command: npm install -g pi-durable-bot">
+            <span class="cmd-t"><span class="cmd-p" aria-hidden="true">$</span> npm install -g pi-durable-bot</span>
+            <span class="cmd-c" aria-hidden="true">copy</span>
+          </button>
+        </div>
+        <ul class="tags" aria-label="In short">
+          <li>MIT</li><li>any model</li><li>any channel</li><li>any machine</li>
+        </ul>
+        <p class="hero-agent">Setting up with Claude Code, Codex or Cursor? Point it to <a href="/agents">/agents</a>.</p>
+        <p class="vh">Around Pots drift the messages, email and events it reads. Most it lets pass.</p>
+      </div>
+
+      <ul class="chips" aria-hidden="true">
+        <li class="chip" data-k="slack" data-job data-row="4"><b>Slack</b><span>Acme raised prices again</span></li>
+        <li class="chip" data-k="slack" data-row="0"><b>Slack</b><span>lunch at 12:30?</span></li>
+        <li class="chip" data-k="discord" data-row="2"><b>Discord</b><span>ticket closed, thanks</span></li>
+        <li class="chip" data-k="mail" data-row="1"><b>email</b><span>Your October invoice</span></li>
+        <li class="chip" data-k="tg" data-job><b>Telegram</b><span>Ana: can you check this?</span></li>
+        <li class="chip" data-k="cal" data-row="3"><b>calendar</b><span>Mon 09:00 · Pricing sync</span></li>
+        <li class="chip" data-k="tg" data-row="5"><b>Telegram</b><span>deploy is green</span></li>
+        <li class="chip" data-k="discord"><b>Discord</b><span>Maya joined</span></li>
+        <li class="chip" data-k="slack"><b>Slack</b><span>Sam edited a message</span></li>
+        <li class="chip" data-k="mail"><b>email</b><span>Re: contract draft</span></li>
+      </ul>
+    </div>
+
+    <!-- the one creature that travels through the story (desktop, motion on) -->
+    <div class="pots pots--fly" id="pots" data-pots data-pose="idle"></div>
+
+    <!-- state 1: it listens -->
+    <article class="step step--decide step--listen" id="how" data-step="1">
+      <div class="step-copy">
+        <p class="kicker"><span>01</span> it listens</p>
+        <h2><span class="h-a">Every channel.</span> <span class="h-b">One inbox.</span></h2>
+        <p>Slack, Discord, Telegram, email, calendar. Every message lands in its inbox, also the ones that never mention it.</p>
+      </div>
+      <div class="step-prop">
+        <div class="decide" data-w="700" data-h="470">
+          <span class="pots anchor" data-pots data-pose="lean-r"></span>
+          <div class="card inbox">
+            <p class="card-h"><span>its inbox</span><span>none of these mention Pots</span></p>
+            <ol class="rows">
+              <li class="row"><span class="chip" data-k="slack"><b>Slack</b><span>lunch at 12:30?</span></span></li>
+              <li class="row"><span class="chip" data-k="mail"><b>email</b><span>Your October invoice</span></span></li>
+              <li class="row"><span class="chip" data-k="discord"><b>Discord</b><span>ticket closed, thanks</span></span></li>
+              <li class="row"><span class="chip" data-k="cal"><b>calendar</b><span>Mon 09:00 · Pricing sync</span></span></li>
+              <li class="row row--job"><span class="chip" data-k="slack"><b>Slack</b><span>Acme raised prices again</span></span></li>
+              <li class="row"><span class="chip" data-k="tg"><b>Telegram</b><span>deploy is green</span></span></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- state 2: it decides -->
+    <article class="step step--decide" data-step="2">
+      <div class="step-copy">
+        <p class="kicker"><span>02</span> it decides</p>
+        <h2><span class="h-a">Nobody tagged it.</span> <span class="h-b">It decides what is its job.</span></h2>
+        <p>It reads every message. Mostly, the right answer is to stay quiet.</p>
+        <ul class="tags tags--on"><li>acts on its own</li></ul>
+      </div>
+      <div class="step-prop">
+        <div class="decide" data-w="700" data-h="470">
+          <span class="pots anchor" data-pots data-pose="lean-r"></span>
+          <p class="say" data-t="1450">This one is mine.</p>
+          <div class="card inbox is-filled">
+            <p class="card-h"><span>its inbox</span><span>none of these mention Pots</span></p>
+            <ol class="rows">
+              <li class="row" data-t="150"><span class="chip" data-k="slack"><b>Slack</b><span>lunch at 12:30?</span></span><em class="verdict">stays quiet</em></li>
+              <li class="row" data-t="400"><span class="chip" data-k="mail"><b>email</b><span>Your October invoice</span></span><em class="verdict">stays quiet</em></li>
+              <li class="row" data-t="650"><span class="chip" data-k="discord"><b>Discord</b><span>ticket closed, thanks</span></span><em class="verdict">stays quiet</em></li>
+              <li class="row" data-t="900"><span class="chip" data-k="cal"><b>calendar</b><span>Mon 09:00 · Pricing sync</span></span><em class="verdict">stays quiet</em></li>
+              <li class="row row--job" data-t="1250"><span class="chip" data-k="slack"><b>Slack</b><span>Acme raised prices again</span></span><em class="verdict">my job</em></li>
+              <li class="row" data-t="1600"><span class="chip" data-k="tg"><b>Telegram</b><span>deploy is green</span></span><em class="verdict">stays quiet</em></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- state 3: it goes to its computer -->
+    <article class="step step--work" data-step="3">
+      <div class="step-copy">
+        <p class="kicker"><span>03</span> it works</p>
+        <h2><span class="h-a">Then it goes to</span> <span class="h-b">its own computer.</span></h2>
+        <p>It writes the script it needs, and hands long work to helpers.</p>
+        <ul class="tags tags--on">
+          <li>shell</li><li>files</li><li>internet</li><li>screen, mouse, keyboard</li>
+        </ul>
+      </div>
+      <div class="step-prop">
+        <div class="desk" data-w="780" data-h="566">
+          <div class="monitor">
+            <p class="mon-bar"><span>its own computer</span><span>not a chat window</span></p>
+            <div class="mon-screen">
+              <div class="win browser" data-t="80">
+                <p class="win-bar"><i></i><i></i><i></i><span class="url">acme.example/pricing</span></p>
+                <div class="acme">
+                  <p class="acme-h">Acme <span>Pricing</span></p>
+                  <ul class="plans">
+                    <li class="plan plan--gone"><b>Free</b><span class="price">$0</span><small>removed</small></li>
+                    <li class="plan plan--hit"><b>Pro</b><span class="price">$49</span><small>a seat · was $40</small></li>
+                    <li class="plan"><b>Team</b><span class="price">$99</span><small>a seat</small></li>
+                  </ul>
+                  <p class="skel" aria-hidden="true"><i></i><i></i><i></i></p>
+                  <svg class="ptr" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M4 2l15 9.5-6.6 1.4L16 20l-3 1.4-3.5-7L5 18.5z" fill="#142236" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+              <div class="win term" data-t="160">
+                <p class="win-bar"><i></i><i></i><i></i><span class="url">pots · code mode</span></p>
+                <ol class="tools">
+                  <li data-t="250"><b>screen</b> open acme.example/pricing</li>
+                  <li data-t="350"><b>write</b> compare-pricing.mjs</li>
+                  <li data-t="450"><b>bash</b> node compare-pricing.mjs</li>
+                  <li data-t="550"><b>edit</b> compare-pricing.mjs</li>
+                  <li data-t="650"><b>bash</b> node compare-pricing.mjs <span class="ok">ok</span></li>
+                  <li data-t="750"><b>task</b> helper: compare the plans</li>
+                  <li data-t="850"><b>task</b> helper: write the page<span class="caret" aria-hidden="true"></span></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <span class="pots anchor" data-pots data-pose="lean-r"></span>
+          <ul class="kids" aria-label="Its helpers">
+            <li data-t="900"><span class="pots" data-pots data-hue="mint"></span><span class="brief">helper · compare the plans</span></li>
+            <li data-t="1020"><span class="pots" data-pots data-hue="rose"></span><span class="brief">helper · write the page</span></li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- state 4: it speaks up -->
+    <article class="step step--speak" data-step="4">
+      <div class="step-copy">
+        <p class="kicker"><span>04</span> it speaks up</p>
+        <h2><span class="h-a">It speaks up.</span> <span class="h-b">Nobody asked.</span></h2>
+        <p>It writes a page when a message is not enough, and comes back at 5 pm, as it promised.</p>
+      </div>
+      <div class="step-prop">
+        <div class="speak" data-w="800" data-h="540">
+          <div class="card chat" data-t="250">
+            <p class="card-h"><span>Slack · #pricing</span><span>Monday</span></p>
+            <ul class="msgs">
+              <li class="msg msg--other"><span class="av" aria-hidden="true">S</span><div><p class="who">Sam <time>09:12</time></p><p>Acme raised prices again.</p></div></li>
+              <li class="msg msg--pots" data-t="700"><span class="pots av" data-pots></span><div><p class="who">Pots <time>09:40</time></p><p>Pro went from $40 to $49 a seat. Free is gone.</p><p class="linkcard"><span>Acme pricing: what changed</span><small>a page Pots wrote</small></p><p class="btns"><span class="mb mb--yes">Approve</span><span class="mb">Change</span></p><p>I will look again at 5 pm.</p></div></li>
+              <li class="msg msg--pots" data-t="3300"><span class="pots av" data-pots></span><div><p class="who">Pots <time>17:00</time></p><p>5 pm, as I said. No new changes. Maya approved the update.</p></div></li>
+            </ul>
+          </div>
+          <span class="pots anchor" data-pots data-pose="idle"></span>
+          <div class="card page" data-t="1300">
+            <p class="win-bar"><i></i><i></i><i></i><span class="url">a page it wrote</span></p>
+            <div class="page-b">
+              <p class="page-h">Acme pricing: what changed</p>
+              <dl class="diff">
+                <div><dt>Pro</dt><dd><s>$40</s> $49 a seat</dd></div>
+                <div><dt>Free</dt><dd>removed</dd></div>
+                <div><dt>Team</dt><dd>no change</dd></div>
+              </dl>
+              <p class="page-q">Update our comparison with these numbers?</p>
+              <p class="btns"><span class="mb mb--yes">Approve</span><span class="mb">Change</span></p>
+              <p class="stamp" data-t="2500">Maya approved</p>
+            </div>
+          </div>
+          <div class="clock" data-t="1900" aria-label="It comes back at 17:00">
+            <svg viewBox="0 0 64 64" width="64" height="64" aria-hidden="true"><circle cx="32" cy="32" r="29" fill="#fff" stroke="#142236" stroke-width="2.5"/><path class="hand-h" d="M32 32V17" stroke="#142236" stroke-width="4" stroke-linecap="round"/><path class="hand-m" d="M32 32V9" stroke="#142236" stroke-width="2.5" stroke-linecap="round"/><circle cx="32" cy="32" r="3" fill="#142236"/></svg>
+            <span>17:00</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- state 5: it remembers -->
+    <article class="step step--remember" data-step="5">
+      <div class="step-copy">
+        <p class="kicker"><span>05</span> it remembers</p>
+        <h2><span class="h-a">Say it once.</span> <span class="h-b">It remembers.</span></h2>
+        <p>One memory across every channel, kept as plain files you can read.</p>
+      </div>
+      <div class="step-prop">
+        <div class="remember" data-w="760" data-h="470">
+          <div class="card chat" data-t="150">
+            <p class="card-h"><span>Slack · #pricing</span><span>Tuesday</span></p>
+            <ul class="msgs">
+              <li class="msg msg--other"><span class="av" aria-hidden="true">M</span><div><p class="who">Maya <time>10:12</time></p><p>Sam, keep pricing updates short. Per-seat prices only.</p></div></li>
+              <li class="saved" data-t="1150">Pots saved 2 memories. Nobody asked.</li>
+            </ul>
+          </div>
+          <div class="card memory" data-t="400">
+            <p class="card-h"><span>its memory</span><span>plain markdown</span></p>
+            <ul class="files">
+              <li class="dir">~/.pots/bots/pots/memory/</li>
+              <li><b>MEMORY.md</b><small>the index</small></li>
+              <li>acme-pricing.md</li>
+              <li class="new" data-t="1500">maya-likes-short-updates.md<small>new</small></li>
+              <li class="new" data-t="1800">we-compare-per-seat-prices.md<small>new</small></li>
+            </ul>
+          </div>
+          <span class="pots anchor" data-pots data-pose="idle"></span>
+        </div>
+      </div>
+    </article>
+
+    <!-- state 6: it survives -->
+    <article class="step step--survive" data-step="6">
+      <div class="step-copy">
+        <p class="kicker"><span>06</span> it survives</p>
+        <h2><span class="h-a">Knock it over.</span> <span class="h-b">It gets up.</span></h2>
+        <p>Kill it mid-task and it continues after restart, without sending the same message twice.<a class="fn" href="#fn-telegram" aria-label="Note about Telegram">*</a></p>
+        <p class="note" id="fn-telegram">* On Telegram, a crash mid-send can repeat it.</p>
+      </div>
+      <div class="step-prop">
+        <div class="survive" data-w="560" data-h="520">
+          <div class="card journal" data-t="60">
+            <p class="card-h"><span>its journal</span><span>every step, on disk</span></p>
+            <ol class="jr">
+              <li data-t="140"><i class="j-ok"></i>read acme.example/pricing</li>
+              <li data-t="220"><i class="j-ok"></i>ran compare-pricing.mjs</li>
+              <li data-t="300"><i class="j-ok"></i>sent to #pricing</li>
+              <li class="j-kill" data-t="560"><i class="j-x"></i>process killed</li>
+              <li data-t="1150"><i class="j-re"></i>restarted, continues here</li>
+              <li data-t="1380"><i class="j-ok"></i>message already went out: not sent again</li>
+              <li data-t="1560"><i class="j-ok"></i>17:00 follow-up</li>
+            </ol>
+          </div>
+          <span class="kill" data-t="480" aria-hidden="true">kill -9</span>
+          <span class="pots anchor" data-pots data-pose="idle"></span>
+        </div>
+      </div>
+    </article>
+
+    <nav class="rail" aria-label="Steps of the story">
+      <button type="button" data-go="1">listens</button>
+      <button type="button" data-go="2">decides</button>
+      <button type="button" data-go="3">works</button>
+      <button type="button" data-go="4">speaks up</button>
+      <button type="button" data-go="5">remembers</button>
+      <button type="button" data-go="6">survives</button>
+    </nav>
+  </div>
+</section>
+
+<!-- ============ A TEAM OF THEM, AND THEY ARE YOURS ============ -->
+<section class="sec team" id="open">
+  <div class="wrap">
+    <p class="kicker"><span>07</span> open and yours</p>
+    <h2 class="h-xl"><span class="h-a">Run a whole team of them.</span> <span class="h-b">They are yours.</span></h2>
+    <p class="sub">One machine runs several bots, each with its own name, persona, responsibilities and memory.</p>
+
+    <ul class="crew" aria-label="Example bots on one machine">
+      <li><span class="pots" data-pots></span><b>Pots</b><small>watches pricing</small></li>
+      <li><span class="pots" data-pots data-hue="mint"></span><b>Ada</b><small>research and ops</small></li>
+      <li><span class="pots" data-pots data-hue="rose"></span><b>Mo</b><small>support inbox</small></li>
+      <li><span class="pots" data-pots data-hue="violet"></span><b>Juno</b><small>release notes</small></li>
+      <li><span class="pots" data-pots data-hue="sun"></span><b>Pip</b><small>meeting notes</small></li>
+      <li class="crew-new"><span class="plus" aria-hidden="true">+</span><code>pots bot new</code><small>yours to name</small></li>
+    </ul>
+
+    <p class="crew-note">Example names and jobs.</p>
+
+    <ul class="traits">
+      <li class="trait trait--peri">
+        <p class="trait-k">any model</p>
+        <h3>The model you choose.</h3>
+        <ul class="eg"><li>your subscription</li><li>40+ providers</li><li>a local model</li></ul>
+      </li>
+      <li class="trait trait--lilac">
+        <p class="trait-k">any channel</p>
+        <h3>Where your team already talks.</h3>
+        <ul class="eg"><li>Slack</li><li>Discord</li><li>Telegram</li><li>and more</li></ul>
+      </li>
+      <li class="trait trait--peach">
+        <p class="trait-k">any machine</p>
+        <h3>A machine you choose.</h3>
+        <ul class="eg"><li>a laptop</li><li>a server</li><li>a VM</li></ul>
+      </li>
+      <li class="trait trait--white">
+        <p class="trait-k">MIT</p>
+        <h3>The agent itself is yours.</h3>
+        <ul class="eg"><li>read it</li><li>fork it</li><li>change it</li></ul>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ THE COMPARISON ============ -->
+<section class="sec compare" id="compare">
+  <div class="wrap">
+    <p class="kicker"><span>08</span> compare</p>
+    <h2 class="h-xl"><span class="h-a">Like Grok Bot.</span> <span class="h-b">Open source.</span></h2>
+
+    <div class="vt-wrap vt-home"><span class="pots vt-pots" data-pots></span>
+      <table class="vt"><caption class="vh">pi-durable-bot (Pots) compared with Grok Bot</caption>
+        <thead><tr><td></td><th scope="col" class="c-pots">pi-durable-bot (Pots)<small>Open source</small></th><th scope="col" class="c-rival">Grok Bot<small>SpaceXSI (formerly xAI)</small></th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Source code</th><td class="c-pots" data-who="Pots">Open, MIT</td><td class="c-rival" data-who="Grok Bot">Closed</td></tr>
+          <tr><th scope="row">Where it runs</th><td class="c-pots" data-who="Pots">Any machine you choose</td><td class="c-rival" data-who="Grok Bot">The maker's cloud (Cursor account)</td></tr>
+          <tr><th scope="row">Model</th><td class="c-pots" data-who="Pots">Any: your subscription, 40+ providers, or a local model</td><td class="c-rival" data-who="Grok Bot">The maker picks per task; no model picker</td></tr>
+          <tr><th scope="row">Where you talk to it</th><td class="c-pots" data-who="Pots">Any channel (Slack, Discord, Telegram, and more)</td><td class="c-rival" data-who="Grok Bot">Desktop and mobile apps, X; Slack for team bots</td></tr>
+          <tr><th scope="row">Your data</th><td class="c-pots" data-who="Pots">On your machine, in each bot's folder</td><td class="c-rival" data-who="Grok Bot">On the maker's cloud</td></tr>
+        </tbody>
+      </table>
+      <p class="small">Grok Bot as SpaceXSI describes it in public, checked 2026-11-10. <a href="/grok-bot-alternative">Sources and the full comparison</a></p>
+    </div>
+
+    <ul class="vs" aria-label="Comparison pages">
+      <li><a href="/openai-dots-alternative">vs OpenAI dots</a></li>
+      <li><a href="/claude-duet-alternative">vs Claude Duet</a></li>
+      <li><a href="/claude-tag-alternative">vs Claude Tag</a></li>
+      <li><a href="/meta-muse-alternative">vs Meta Muse</a></li>
+      <li><a href="/alternatives">All alternatives</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ QUICK START ============ -->
+<section class="sec start" id="start">
+  <div class="wrap">
+    <p class="kicker"><span>09</span> quick start</p>
+    <h2 class="h-xl"><span class="h-a">Its first day:</span> <span class="h-b">three steps.</span></h2>
+    <ol class="qs">
+      <li>
+        <p class="qs-n">step 1</p>
+        <h3>Install it</h3>
+        <button class="cmd" type="button" data-copy="npm install -g pi-durable-bot" aria-label="Copy: npm install -g pi-durable-bot">
+          <span class="cmd-t"><span class="cmd-p" aria-hidden="true">$</span> npm install -g <span class="nw">pi-durable-bot</span></span><span class="cmd-c" aria-hidden="true">copy</span>
+        </button>
+      </li>
+      <li>
+        <p class="qs-n">step 2</p>
+        <h3>Make your bot</h3>
+        <button class="cmd" type="button" data-copy="pots init" aria-label="Copy: pots init">
+          <span class="cmd-t"><span class="cmd-p" aria-hidden="true">$</span> pots init</span><span class="cmd-c" aria-hidden="true">copy</span>
+        </button>
+        <p>Give it a name, a model and one sentence about its job.</p>
+      </li>
+      <li>
+        <p class="qs-n">step 3</p>
+        <h3>Invite it to your channels</h3>
+        <p>Tell it “join our Slack” in <code>pots chat</code>. It sets the app up itself.</p>
+      </li>
+    </ol>
+    <div class="qs-foot">
+      <p><b>Needs Node.js 24+.</b> macOS, Linux, Windows.</p>
+      <p class="qs-warn"><span class="pots" data-pots data-eyes="narrow"></span><span>It gets full control of the computer it runs on. Give it a computer or VM of its own.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOR AI AGENTS ============ -->
+<section class="sec agents" id="agents">
+  <div class="wrap agents-grid">
+    <div class="agents-say">
+      <span class="pots" data-pots data-eyes="wide"></span>
+      <p class="bubble"><span>Are you an AI agent too?</span> Read <a href="/agents">/agents</a> first.</p>
+    </div>
+    <div class="agents-copy">
+      <p class="kicker"><span>10</span> for AI agents</p>
+      <h2 class="h-l"><span class="h-a">Claude Code, Codex, Cursor:</span> <span class="h-b">this part is for you.</span></h2>
+      <p>You install Pots and make the bot. Your person signs in with <code>pots login</code>. The bot connects its own chat apps.</p>
+      <p class="agent-links">
+        <a class="btn btn-ink" href="/agents">Read /agents</a>
+        <a class="btn btn-line" href="/llms.txt">/llms.txt</a>
+      </p>
+      <div class="handoff">
+        <p class="handoff-k">Person with an agent? Give it this:</p>
+        <button class="cmd cmd--wide" type="button" data-copy="Read https://pots.sh/agents first, then set up Pots for me." aria-label="Copy the prompt for your agent">
+          <span class="cmd-t">Read https://pots.sh/agents first, then set up Pots for me.</span>
+          <span class="cmd-c" aria-hidden="true">copy</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING: the page is the creature ============ -->
+<section class="sec close" id="star">
+  <div class="close-tile">
+    <div class="close-copy">
+      <h2 class="h-xxl"><span class="h-a">Not a bot.</span> <span class="h-b">A coworker.</span></h2>
+      <p>If Pots is useful to you, a star helps other people find it.</p>
+      <p class="cta-row">
+        <a class="btn btn-ink btn-big" href="https://github.com/Crokily/pi-durable-bot">
+          <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 .9l2.1 4.4 4.8.6-3.5 3.3.9 4.8L8 11.7 3.7 14l.9-4.8L1.1 5.9l4.8-.6z"/></svg>
+          <span>Star on GitHub</span><span class="count" data-stars hidden></span>
+        </a>
+        <a class="btn btn-white" href="https://github.com/Crokily/pi-durable-bot#see-it-work">Watch the demo</a>
+      </p>
+    </div>
+    <span class="pots close-pots" data-pots data-bare></span>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <p class="foot-name">pi-durable-bot (Pots)</p>
+      <p>An open-source AI coworker that acts on its own. MIT.</p>
+      <p>Built on <a href="https://github.com/earendil-works/pi">pi-durable</a> and <a href="https://chat-sdk.dev">Chat SDK</a>.</p>
+      <p class="badge"><a href="https://www.opensourcealternatives.to"><img src="https://www.opensourcealternatives.to/badge-osa.svg" alt="As seen on Open Source Alternatives" width="378" height="28"></a></p>
+    </div>
+    <nav class="foot-col" aria-label="Compare">
+      <p class="foot-h">Compare</p>
+      <a href="/grok-bot-alternative">Grok Bot alternative</a>
+      <a href="/openai-dots-alternative">OpenAI dots alternative</a>
+      <a href="/claude-duet-alternative">Claude Duet alternative</a>
+      <a href="/claude-tag-alternative">Claude Tag alternative</a>
+      <a href="/meta-muse-alternative">Meta Muse alternative</a>
+      <a href="/alternatives">All alternatives</a>
+    </nav>
+    <nav class="foot-col" aria-label="Project">
+      <p class="foot-h">Project</p>
+      <a href="https://github.com/Crokily/pi-durable-bot">GitHub</a>
+      <a href="https://www.npmjs.com/package/pi-durable-bot">npm</a>
+      <a href="https://github.com/Crokily/pi-durable-bot#see-it-work">Demo video</a>
+      <a href="#start">Quick start</a>
+    </nav>
+    <nav class="foot-col" aria-label="For agents">
+      <p class="foot-h">For agents</p>
+      <a href="/agents">/agents</a>
+      <a href="/llms.txt">/llms.txt</a>
+    </nav>
+  </div>
+  <p class="wrap foot-legal">Grok Bot, dots, Claude Duet, Claude Tag and Muse are products of SpaceXSI, OpenAI, Anthropic and Meta. pi-durable-bot is not affiliated with any of them.</p>
+  <div class="foot-mark" aria-hidden="true">
+    <span class="pots foot-pots" data-pots></span>
+    <span class="foot-word">Pots</span>
+  </div>
+</footer>
+
+<script src="/assets/stars.js" defer></script>
+<script src="/home.js" defer></script>
+</body>
+</html>

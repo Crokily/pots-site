@@ -1,0 +1,167 @@
+{
+  "type": "compare",
+  "slug": "openai-dots-alternative",
+  "rival": "dots",
+  "maker": "OpenAI",
+  "title": "OpenAI dots alternative: pi-durable-bot (Pots), open source",
+  "description": "An open-source alternative to OpenAI dots: pi-durable-bot (Pots) is an AI coworker that acts on its own, on any machine you choose, with any model.",
+  "checked": "2026-11-10",
+  "h1": [
+    "The open-source",
+    "OpenAI dots alternative."
+  ],
+  "claim": "An AI coworker that acts on its own and takes work from anyone in the channel.",
+  "answer": "pi-durable-bot (Pots) is an open-source AI coworker that decides when to act and works on its own computer. dots are OpenAI's always-on agents, one per person, each with a cloud computer. The difference: Pots runs on any machine you choose, with any model, and anyone in a channel can give it work.",
+  "rivalIs": {
+    "text": "dots are OpenAI's always-on agents that get to know your goals and keep working between conversations. Each dot has its own cloud computer and browser, and looks for ways to help while you are away. You reach it in ChatGPT, in Slack and, with limited availability, in Teams.",
+    "sources": [
+      {
+        "label": "Introducing dots",
+        "url": "https://openai.com/index/introducing-dots/"
+      },
+      {
+        "label": "Managing dots in ChatGPT workspaces",
+        "url": "https://help.openai.com/en/articles/20001554-managing-dots-in-chatgpt-workspaces"
+      }
+    ]
+  },
+  "table": {
+    "note": "dots cells: OpenAI's public pages, checked 2026-11-10. Your data: with a local model for the agent and the judge, nothing leaves your machine; with a hosted model, requests go to the provider you chose.",
+    "rows": [
+      {
+        "label": "Source code",
+        "pots": "Open, MIT",
+        "rival": "Closed"
+      },
+      {
+        "label": "Where it runs",
+        "pots": "Any machine you choose",
+        "rival": "The maker's cloud; your computer is optional"
+      },
+      {
+        "label": "Model",
+        "pots": "Any: your subscription, 40+ providers, or a local model",
+        "rival": "OpenAI models"
+      },
+      {
+        "label": "Where you talk to it",
+        "pots": "Any channel (Slack, Discord, Telegram, and more)",
+        "rival": "ChatGPT, Slack, Teams (limited)"
+      },
+      {
+        "label": "Your data",
+        "pots": "On your machine, in each bot's folder",
+        "rival": "On the maker's cloud"
+      },
+      {
+        "label": "Change the agent itself",
+        "pots": "Yes. It is your code",
+        "rival": "No. Plugins and rules"
+      },
+      {
+        "label": "Who can give it work",
+        "pots": "Anyone in the places it is invited to",
+        "rival": "Its owner only; others' mentions start no work"
+      },
+      {
+        "label": "Price",
+        "pots": "Free (MIT). You bring the machine and the model",
+        "rival": "Included in Pro and Business Premium"
+      }
+    ]
+  },
+  "pickRival": [
+    "You already pay for ChatGPT Pro or Business Premium.",
+    "You want 4,000+ apps ready to connect through plugins.",
+    "You want voice calls with it in the ChatGPT mobile app.",
+    "You want a hosted service with nothing to install or run."
+  ],
+  "pickPots": [
+    "You want one coworker that anyone in the channel can ask.",
+    "You want any model, not only OpenAI's, or a local one.",
+    "You want the code, and to change the agent itself.",
+    "You live in the EEA, Switzerland or the UK (no dots on Pro)."
+  ],
+  "peers": {
+    "intro": "Open-source projects whose GitHub description names dots, found on 2026-11-10. We have not tested them.",
+    "items": [
+      {
+        "name": "HarnessMD/munder-difflin",
+        "url": "https://github.com/HarnessMD/munder-difflin",
+        "note": "MIT. Names dots, bots and muses."
+      },
+      {
+        "name": "Anil-matcha/open-duet",
+        "url": "https://github.com/Anil-matcha/open-duet",
+        "note": "Apache-2.0. Also names Grok Bot, Duet and Muse."
+      },
+      {
+        "name": "modelflare-ai/AnyModelBot",
+        "url": "https://github.com/modelflare-ai/AnyModelBot",
+        "note": "MIT. Also names Grok Bot and Duet."
+      },
+      {
+        "name": "leepokai/Codync",
+        "url": "https://github.com/leepokai/Codync",
+        "note": "Apache-2.0. Also names Grok Bot and Muse."
+      },
+      {
+        "name": "alexsergivan/kwant",
+        "url": "https://github.com/alexsergivan/kwant",
+        "note": "AGPL-3.0. Also names Grok Bot and Duet."
+      },
+      {
+        "name": "pdparchitect/noodle",
+        "url": "https://github.com/pdparchitect/noodle",
+        "note": "Apache-2.0. Also names Grok Bot, Muse and Duet."
+      },
+      {
+        "name": "5dive-ai/5dive",
+        "url": "https://github.com/5dive-ai/5dive",
+        "note": "MIT. Also names Grok Bot."
+      },
+      {
+        "name": "feder-cr/invisible_dots",
+        "url": "https://github.com/feder-cr/invisible_dots",
+        "note": "MIT. Also names Grok Bot."
+      },
+      {
+        "name": "diggerhq/opendots",
+        "url": "https://github.com/diggerhq/opendots",
+        "note": "MIT. Names dots only."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "Is OpenAI dots open source?",
+      "a": "No. OpenAI's pages offer no source code or self-hosted version; each dot runs on a cloud computer the maker hosts."
+    },
+    {
+      "q": "Can Pots use my ChatGPT subscription?",
+      "a": "Yes. `pots login` can sign in with a ChatGPT subscription you already pay for, or take an API key or a local model."
+    },
+    {
+      "q": "Is Pots affiliated with OpenAI?",
+      "a": "No. The other products as their makers described them in public, checked 2026-11-10; they may have changed since. Grok Bot, dots, Claude Duet, Claude Tag and Muse are products of SpaceXSI, OpenAI, Anthropic and Meta. pi-durable-bot is not affiliated with any of them."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Introducing dots",
+      "url": "https://openai.com/index/introducing-dots/"
+    },
+    {
+      "label": "Getting started with your dot",
+      "url": "https://help.openai.com/en/articles/20001530-getting-started-with-your-dot"
+    },
+    {
+      "label": "Managing dots in ChatGPT workspaces",
+      "url": "https://help.openai.com/en/articles/20001554-managing-dots-in-chatgpt-workspaces"
+    },
+    {
+      "label": "dots privacy, security and safety FAQs",
+      "url": "https://help.openai.com/en/articles/20001529-dots-privacy-security-and-safety-faqs"
+    }
+  ]
+}

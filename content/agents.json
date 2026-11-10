@@ -1,0 +1,60 @@
+{
+  "type": "agents",
+  "slug": "agents",
+  "title": "For AI agents: set up pi-durable-bot (Pots)",
+  "description": "For AI agents (Claude Code, Codex, Cursor) that set up pi-durable-bot (Pots) for a person: the steps, the commands, and the one step that is theirs.",
+  "h1": [
+    "For AI agents:",
+    "set up pi-durable-bot (Pots)."
+  ],
+  "claim": "You install Pots and make the bot. Your person signs in to a model. The bot then connects its own chat apps.",
+  "steps": [
+    {
+      "title": "Warn your person first",
+      "text": "The bot gets full control of the computer it runs on, with no approval step. Recommend a computer or VM of its own; go on only if they agree."
+    },
+    {
+      "title": "Install where the bot will live",
+      "text": "Node.js 24 or newer, on macOS, Linux or Windows. Over SSH, run it on the server.",
+      "code": "npm install -g pi-durable-bot"
+    },
+    {
+      "title": "See what it can use",
+      "text": "Lists the models and judges ready on this computer, never a secret.",
+      "code": "pots login --list"
+    },
+    {
+      "title": "Ask only what is missing",
+      "text": "Its name, what it is for, how it gets its AI, and who decides on group messages: the bot or Jev."
+    },
+    {
+      "title": "Your person signs in",
+      "text": "If their choice is not listed, they run this in their own terminal; keys never pass through your chat.",
+      "code": "pots login"
+    },
+    {
+      "title": "Make the bot",
+      "text": "Pick the newest strong model listed and say which. `--yes` accepts step 1. `--judge off` if no group chats; `--judge typesafe/jev-latest` for Jev.",
+      "code": "pots init --yes --name \"Ada\" --model openai/gpt-6.1-sol --about \"our team's research and ops assistant\" --no-chat"
+    },
+    {
+      "title": "Check, then hand over",
+      "text": "It must print the bot's answer. Then your person runs `pots chat` to meet the bot.",
+      "code": "pots chat --bot <id> -m \"hi\" --timeout 60"
+    }
+  ],
+  "rules": [
+    "Do not create the chat app, collect tokens or edit `~/.pots/` by hand. The bot does that itself.",
+    "Run `pots mcp add` only when your person asks for an MCP server."
+  ],
+  "links": [
+    {
+      "label": "for-agents.md on GitHub",
+      "url": "https://github.com/Crokily/pi-durable-bot/blob/main/docs/for-agents.md"
+    },
+    {
+      "label": "README",
+      "url": "https://github.com/Crokily/pi-durable-bot"
+    }
+  ]
+}

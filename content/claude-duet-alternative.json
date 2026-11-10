@@ -1,0 +1,152 @@
+{
+  "type": "compare",
+  "slug": "claude-duet-alternative",
+  "rival": "Claude Duet",
+  "maker": "Anthropic",
+  "title": "Claude Duet alternative: pi-durable-bot (Pots), open source",
+  "description": "An open-source alternative to Claude Duet: pi-durable-bot (Pots) is an AI coworker that acts on its own in your team's chat apps, with any model.",
+  "checked": "2026-11-10",
+  "h1": [
+    "The open-source",
+    "Claude Duet alternative."
+  ],
+  "claim": "An AI coworker that acts on its own inside your team's chat apps, with the model you choose.",
+  "answer": "pi-durable-bot (Pots) is an open-source AI coworker that decides when to act and works on its own computer. Claude Duet is Anthropic's proactive agent in its own app, as a US-only preview. The difference: Pots runs on any machine you choose, with any model, in your team's chat apps.",
+  "rivalIs": {
+    "text": "Claude Duet is Anthropic's app where Claude works as a proactive agent for professionals and small business owners. It runs on a cloud VM with its own browser, checks your connected accounts every few hours, and asks before it acts for you. It is a US-only research preview, by waitlist.",
+    "sources": [
+      {
+        "label": "Claude Duet announcement",
+        "url": "https://claude.com/resources/articles/claude-duet"
+      },
+      {
+        "label": "Get started with Claude Duet",
+        "url": "https://support.claude.com/en/articles/17631495-get-started-with-claude-duet"
+      }
+    ]
+  },
+  "table": {
+    "note": "Claude Duet cells: Anthropic's public pages, checked 2026-11-10. Your data: with a local model for the agent and the judge, nothing leaves your machine; with a hosted model, requests go to the provider you chose.",
+    "rows": [
+      {
+        "label": "Source code",
+        "pots": "Open, MIT",
+        "rival": "Closed"
+      },
+      {
+        "label": "Where it runs",
+        "pots": "Any machine you choose",
+        "rival": "The maker's cloud"
+      },
+      {
+        "label": "Model",
+        "pots": "Any: your subscription, 40+ providers, or a local model",
+        "rival": "Claude Opus 5.5; no choice"
+      },
+      {
+        "label": "Where you talk to it",
+        "pots": "Any channel (Slack, Discord, Telegram, and more)",
+        "rival": "Its own app, and the web"
+      },
+      {
+        "label": "Your data",
+        "pots": "On your machine, in each bot's folder",
+        "rival": "On the maker's cloud"
+      },
+      {
+        "label": "Change the agent itself",
+        "pots": "Yes. It is your code",
+        "rival": "No. Connectors and plugins"
+      },
+      {
+        "label": "When it sees new messages",
+        "pots": "As they arrive; a mention wakes it at once",
+        "rival": "Checks connected accounts every few hours"
+      },
+      {
+        "label": "Availability",
+        "pots": "Anyone, from npm",
+        "rival": "US only, by waitlist (research preview)"
+      },
+      {
+        "label": "Price",
+        "pots": "Free (MIT). You bring the machine and the model",
+        "rival": "Included in Pro, Max and Ultra during the preview"
+      }
+    ]
+  },
+  "pickRival": [
+    "You want a phone app that brings you a brief each morning.",
+    "You already pay for Claude Pro, Max or Ultra, in the US.",
+    "You want 6,000+ connectors and plugins from the Claude Marketplace.",
+    "You want it to ask before it sends, pays, signs or deletes."
+  ],
+  "pickPots": [
+    "You want it in your team's channels, not in a separate app.",
+    "You want to choose the model, or run a local one.",
+    "You want the code, on a machine you choose.",
+    "You are outside the US, or do not want to wait."
+  ],
+  "peers": {
+    "intro": "Open-source projects whose GitHub description names Claude Duet, found on 2026-11-10. We have not tested them.",
+    "items": [
+      {
+        "name": "Anil-matcha/open-duet",
+        "url": "https://github.com/Anil-matcha/open-duet",
+        "note": "Apache-2.0. Also names Grok Bot, dots and Muse."
+      },
+      {
+        "name": "modelflare-ai/AnyModelBot",
+        "url": "https://github.com/modelflare-ai/AnyModelBot",
+        "note": "MIT. Also names Grok Bot and dots."
+      },
+      {
+        "name": "alexsergivan/kwant",
+        "url": "https://github.com/alexsergivan/kwant",
+        "note": "AGPL-3.0. Also names Grok Bot and dots."
+      },
+      {
+        "name": "ychampion/openduet",
+        "url": "https://github.com/ychampion/openduet",
+        "note": "Apache-2.0. Names Duet only."
+      },
+      {
+        "name": "hmody1m/covo",
+        "url": "https://github.com/hmody1m/covo",
+        "note": "MIT. Names Duet only."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "Is Claude Duet open source?",
+      "a": "No. Anthropic's pages offer no source code or self-hosted version; Duet runs on a cloud VM the maker hosts."
+    },
+    {
+      "q": "Can Pots use my Claude subscription?",
+      "a": "Yes. `pots login` can sign in with a Claude subscription you already pay for, and Pots can run Claude Opus 5.5 or any other model pi supports."
+    },
+    {
+      "q": "Is Pots affiliated with Anthropic?",
+      "a": "No. The other products as their makers described them in public, checked 2026-11-10; they may have changed since. Grok Bot, dots, Claude Duet, Claude Tag and Muse are products of SpaceXSI, OpenAI, Anthropic and Meta. pi-durable-bot is not affiliated with any of them."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Claude Duet product page",
+      "url": "https://claude.com/product/claude-duet"
+    },
+    {
+      "label": "Claude Duet announcement",
+      "url": "https://claude.com/resources/articles/claude-duet"
+    },
+    {
+      "label": "Claude Duet safety, privacy and security",
+      "url": "https://claude.com/resources/articles/claude-duet-safety-privacy-and-security"
+    },
+    {
+      "label": "Get started with Claude Duet",
+      "url": "https://support.claude.com/en/articles/17631495-get-started-with-claude-duet"
+    }
+  ]
+}
