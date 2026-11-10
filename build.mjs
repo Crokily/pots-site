@@ -292,7 +292,7 @@ const paths = ['/'];
 for (const c of CONTENT) {
   const r = c.type === 'compare' ? compare(c) : c.type === 'hub' ? hub(c) : c.type === 'agents' ? agents(c) : null;
   if (!r) throw new Error(c.slug + ': unknown type ' + c.type);
-  out(`${c.slug}/index.html`, r.html);
+  out(`${c.slug}.html`, r.html); // Pages serves /slug from slug.html with no redirect
   out(`${c.slug}.md`, r.md);
   paths.push('/' + c.slug);
 }
