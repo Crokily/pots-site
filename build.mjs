@@ -27,6 +27,7 @@ const STAR = '<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"
 let home = read('static', 'index.html');
 const grab = (re) => { const m = home.match(re); if (!m) throw new Error('home page: missing ' + re); return m[0]; };
 const toRoot = (html) => html.replace(/href="#top"/g, 'href="/"').replace(/href="#/g, 'href="/#');
+const NOTE = grab(/<aside class="scam-note"[\s\S]*?<\/script>/);
 const HEADER = toRoot(grab(/<header class="hdr">[\s\S]*?<\/header>/));
 const FOOTER = toRoot(grab(/<footer class="foot">[\s\S]*?<\/footer>/));
 const FONTS = grab(/<link rel="preconnect" href="https:\/\/fonts\.googleapis\.com">[\s\S]*?rel="stylesheet">/);
@@ -70,6 +71,7 @@ ${jsonld.map((j) => `<script type="application/ld+json">${JSON.stringify(j).repl
 </head>
 <body class="subpage">
 <a class="skip" href="#main">Skip to content</a>
+${NOTE}
 ${HEADER}
 <main id="main">
 ${body}
