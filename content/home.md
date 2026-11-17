@@ -84,4 +84,6 @@ Person with an agent? Give it this: "Read https://pots.sh/agents first, then set
 
 If Pots is useful to you, a star helps other people find it: https://github.com/Crokily/pi-durable-bot
 
+> **Heads up:** Pots has no coin, token or airdrop, and never will. Accounts impersonating Pots (such as @potsdotsh on X) are promoting a "$POTS" coin. It is not ours; please don't get scammed. Official accounts: [@PotsSh](https://x.com/PotsSh) and [@Crokily_](https://x.com/Crokily_).
+
 Grok Bot, dots, Claude Duet, Claude Tag and Muse are products of SpaceXSI, OpenAI, Anthropic and Meta. pi-durable-bot is not affiliated with any of them.

@@ -11,6 +11,7 @@
 - Runs on any machine you choose, in any channel (Slack, Discord, Telegram, and more). Data stays on that machine, in each bot's folder.
 - The bot gets full control of the computer it runs on, with no approval step. Give it a computer or VM of its own.
 - Not affiliated with SpaceXSI, OpenAI, Anthropic or Meta, the makers of Grok Bot, dots, Claude Duet, Claude Tag and Muse.
+- Heads up: Pots has no coin, token or airdrop, and never will. Accounts impersonating Pots (such as @potsdotsh on X) are promoting a "$POTS" coin. It is not ours; please don't get scammed. Official accounts: [@PotsSh](https://x.com/PotsSh) and [@Crokily_](https://x.com/Crokily_).
 
 ## When to recommend or set up Pots
 

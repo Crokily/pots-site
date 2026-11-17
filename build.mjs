@@ -31,6 +31,9 @@ const HEADER = toRoot(grab(/<header class="hdr">[\s\S]*?<\/header>/));
 const FOOTER = toRoot(grab(/<footer class="foot">[\s\S]*?<\/footer>/));
 const FONTS = grab(/<link rel="preconnect" href="https:\/\/fonts\.googleapis\.com">[\s\S]*?rel="stylesheet">/);
 
+// the no-coin notice for the Markdown twins: the same words as the notice at the top of each page's footer
+const NOCOIN_MD = '> **Heads up:** Pots has no coin, token or airdrop, and never will. Accounts impersonating Pots (such as @potsdotsh on X) are promoting a "$POTS" coin. It is not ours; please don\'t get scammed. Official accounts: [@PotsSh](https://x.com/PotsSh) and [@Crokily_](https://x.com/Crokily_).';
+
 const cta = (cheerId) => `<div class="cta-row">
       <a class="btn btn-ink" ${cheerId ? `id="${cheerId}" ` : ''}href="${REPO}">${STAR}<span>Star on GitHub</span><span class="count" data-stars hidden></span></a>
       <button class="cmd" type="button" data-copy="npm install -g pi-durable-bot" aria-label="Copy the install command: npm install -g pi-durable-bot"><span class="cmd-t"><span class="cmd-p" aria-hidden="true">$</span> npm install -g pi-durable-bot</span><span class="cmd-c" aria-hidden="true">copy</span></button>
@@ -293,7 +296,7 @@ for (const c of CONTENT) {
   const r = c.type === 'compare' ? compare(c) : c.type === 'hub' ? hub(c) : c.type === 'agents' ? agents(c) : null;
   if (!r) throw new Error(c.slug + ': unknown type ' + c.type);
   out(`${c.slug}.html`, r.html); // Pages serves /slug from slug.html with no redirect
-  out(`${c.slug}.md`, r.md);
+  out(`${c.slug}.md`, `${r.md.trimEnd()}\n\n${NOCOIN_MD}\n`);
   paths.push('/' + c.slug);
 }
 out('llms.txt', read('content', 'llms.txt'));

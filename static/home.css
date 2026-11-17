@@ -905,3 +905,17 @@ html.pinned .step--decide{opacity:1;visibility:visible;transition:none}
 html.pinned .step--decide > *{opacity:0;visibility:hidden;transition:opacity .25s,visibility 0s .25s}
 html.pinned .step--decide.is-active > *{opacity:1;visibility:visible;transition:opacity .45s .18s,visibility 0s}
 html.pinned .stage.is-swap .step--decide .step-prop{transition:none}
+
+/* ══════════ no coin: a calm notice at the top of the footer, on every page ══════════ */
+.nocoin{position:relative;display:grid;gap:18px 40px;margin-bottom:clamp(48px,6vw,84px);padding:clamp(26px,3.2vw,44px) clamp(22px,3.6vw,52px);border-radius:28px;
+  background:linear-gradient(165deg,rgba(255,214,190,.8),rgba(255,255,255,.52) 72%);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);box-shadow:var(--edge),var(--lift)}
+.nocoin > .pots{position:absolute;right:clamp(22px,4vw,56px);top:-30px;width:60px;rotate:8deg}
+.nocoin > .pots .pots-pose{font-size:60px}
+.nocoin-k{display:inline-flex;align-items:center;gap:8px;font:500 12px/1 var(--mono);letter-spacing:.02em;padding:6px 12px 6px 8px;border-radius:999px;background:rgba(255,255,255,.55);box-shadow:inset 0 0 0 1px rgba(255,255,255,.6)}
+.nocoin-k::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--coral)}
+.nocoin-h{margin-top:16px;font:600 clamp(26px,2.5vw,34px)/1.06 var(--display);letter-spacing:-.04em;text-wrap:balance}
+.nocoin-body{display:grid;gap:12px;align-content:center;font-size:16px;line-height:1.5;color:var(--muted);text-wrap:pretty;max-width:34em}
+.nocoin-acc{color:var(--ink)}
+.nocoin-acc a{font-weight:600;text-underline-offset:3px;text-decoration-thickness:1px;text-decoration-color:rgba(20,34,54,.35)}
+.nocoin-acc a:hover{text-decoration-color:currentColor}
+@media (min-width:900px){.nocoin{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:center}}
