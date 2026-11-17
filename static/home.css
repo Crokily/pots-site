@@ -905,10 +905,3 @@ html.pinned .step--decide{opacity:1;visibility:visible;transition:none}
 html.pinned .step--decide > *{opacity:0;visibility:hidden;transition:opacity .25s,visibility 0s .25s}
 html.pinned .step--decide.is-active > *{opacity:1;visibility:visible;transition:opacity .45s .18s,visibility 0s}
 html.pinned .stage.is-swap .step--decide .step-prop{transition:none}
-
-/* the scam notice at the top of every page; the fixed header sits below it until it scrolls away */
-.scam-note{position:relative;z-index:61;padding:9px var(--gut);background:var(--peach-t);border-bottom:1px solid rgba(255,138,92,.35);color:var(--ink);font:400 13.5px/1.45 var(--sans);text-align:center;text-wrap:balance}
-.scam-note p{max-width:75em;margin:0 auto}
-.scam-note b{font-weight:600}
-.scam-note a{color:inherit;text-underline-offset:2px}
-.hdr{top:calc(14px + var(--note-off,0px))}

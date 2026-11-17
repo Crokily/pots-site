@@ -1,5 +1,3 @@
-> **Heads up:** Pots has no coin, token or airdrop, and never will. Accounts impersonating Pots (such as @potsdotsh on X) are promoting a "$POTS" coin. It is not ours; please don't get scammed. Official accounts: [@PotsSh](https://x.com/PotsSh) and [@Crokily_](https://x.com/Crokily_).
-
 Not a bot. A coworker.
 
 # The open-source Grok Bot alternative: an AI coworker that acts on its own.
